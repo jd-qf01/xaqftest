@@ -1,0 +1,169 @@
+@charset "utf-8";
+#login-nav{
+    width: 100%;
+    background-color: white;
+   position: fixed;
+    /* height: 447px; */
+    z-index: 10;
+    /* background-color: white; */
+}
+#login{
+    background-color: white;
+    width:100%;
+    margin: 0 auto;
+    display: none;
+    position: absolute;
+}
+.login-con{
+    width: 1000px;
+    margin: auto;
+    height: 397px;
+    padding: 40px 0 0 200px;
+    background-color: white;
+}
+.login-left{
+    width: 150px;
+    height: 317px;
+}
+#login .login-con .loginline{
+    width: 1px;
+    height: 317px;
+    margin: 0 80px;
+    background-color: rgb(5, 17, 17);
+}
+.logcom{
+    float: left;
+}
+.loginright-box{
+    width: 300px;
+    height: 344.3px;
+    background-color: rgb(255, 255, 255);
+}
+/* 内容 */
+.login-left dt{
+    font-size: 24px;
+    font-weight: bolder;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 24px;
+}
+.login-left dd{
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    background-color: #000;
+    position: relative;
+}
+.login-left dd a{
+    font-size: 18px;
+    line-height: 40px;
+    color: #fff;
+}
+.login-left .a-arrow{
+    position: absolute;
+    top:5px;
+    margin-left: 10px;
+    display: inline-block;
+    width: 20px;
+    height: 30px;
+    background-image: url(../images/indeximg/arrow1.png);  
+}
+.login-left dd:hover{
+    background-color: white;
+   border:1px solid black;
+}
+.login-left dd:hover a{
+ color: rgb(8, 8, 8);
+}
+.login-left:hover .a-arrow{
+    background-position: 20px 0;
+}
+/* 注册页面右边表单 */
+.loginright dt{
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 24px;
+}
+#email,#pwd{
+    display: inline-block;
+    width: 300px;
+    border: 1px solid gray;
+    margin-bottom: 5px;
+    height: 40px;
+    background-color: #fff;
+    padding: 5px 5px 5px 18px;
+}
+.loginright .yzm{
+    display: inline-block;
+    width: 120px;
+    height: 40px;
+    background-color: rgb(110, 236, 110);
+    font-size: 16px;
+    text-align: center;
+    line-height: 40px;
+}
+#psyzm{
+  float: left;
+    width: 142px;
+    border: 1px solid gray;
+    margin-right: 14.3px;
+    height: 40px;
+    background-color: #fff;
+    padding: 5px 5px 5px 18px;
+}
+.loginright i{
+    width: 300px;
+    display: block;
+   text-align: right;
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+.loginright .agreebtn{ 
+    width: 22px;
+    height: 22px;
+    border: 1px solid black;
+    float: left;
+} 
+.loginright .agree strong{
+    font-size: 12px;
+    color: #333;
+    line-height: 22px;
+    text-indent: 22px;
+}
+.loginright .agree strong a{
+    color: #333;
+    text-decoration: underline;
+}
+.loginright .agree{
+    position: relative;
+}
+#login-btn{
+    width: 300px;
+    border: 1px solid gray;
+    height: 40px;
+    background-color: #fff;
+    padding: 5px 5px 5px 18px;
+    margin-bottom: 3px;
+}
+#login-btn{
+text-align: center;
+
+}
+.loginright .rember{
+    font-size: 14px;
+    color: #333;
+
+}
+.loginright .rember a{
+    color: rgb(10, 5, 5);
+    text-decoration: underline;
+    float: right;
+}
+.remberbtn{
+    width: 22px;
+    height: 22px;
+    border: 1px solid black;
+    float: left;
+}
+

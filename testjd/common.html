@@ -1,0 +1,404 @@
+<!-- 先引入js代码 -->
+<script src="js/jQuery.js"></script>
+<script src="js/index.js"></script>
+<script src="js/loginreg.js"></script>
+<script src="./js/cart.js"></script>
+<!-- header页面 -->
+<div id="header">
+    <div class="header-con">
+        <a href="./kwindex.html">
+            <div class="logo"></div>
+        </a>
+        <ul class="r-nav">
+            <li class="n1">
+                <a href="#" class="login" id="login-btnonly">登录</a>
+                <a href="#" class="line">/</a>
+                <a href="#" class="regist" id="regist-btnonly">注册</a>
+                <span></span>
+            </li>
+            <li class="n2">
+                <a href="#">购物车</a>
+                <span class="cart-number">0</span>
+            </li>
+            <li class="n3">
+                <span>
+                    <strong>聊天</strong>
+                </span>
+            </li>
+            <li class="n4">
+                <span>
+                    <strong>搜索</strong>
+                </span>
+            </li>
+            <li class="n5">
+                <span>
+                    <strong>帮助</strong>
+                </span>
+            </li>
+        </ul>
+    </div>
+
+</div>
+<!-- 登录注册页面组合 -->
+<div id="login-nav">
+    <!--  登陆页面-->
+    <div id="login">
+        <div class="login-con">
+            <dl class="login-left logcom">
+                <dt>还未注册？</dt>
+                <dd>
+                    <a href="#">注册账户</a>
+                    <span class="a-arrow"></span>
+                </dd>
+            </dl>
+            <dl class="loginline logcom"></dl>
+            <form method="post" action="LoginServlet" class="loginright-box logcom">
+                <dl class="loginright">
+                    <dt>已经成为会员？</dt>
+                    <input type="text" name="username" id="email" placeholder="邮箱/手机"><span></span>
+                    <input type="password" name="userpass" id="pwd" placeholder="账户密码"><span></span>
+                    <input type="text" name="" id="psyzm" placeholder="请输入验证码">
+                    <span class="yzm"></span><br>
+                    <span class="xx"></span>
+                    <i class="exchangge-btn">换一张</i>
+                    <div class="agree">
+                        <input type="checkbox" name="" id="" class="agreebtn">
+                        <strong>一旦登录，即表明您同意匡威更新的<a href="#">隐私政策</a>和<a href="#">使用规则</a> </strong>
+                    </div>
+                    <input type="button" onclick="loginsys()" id="login-btn" value="登录" />
+                    <span id="successmes"></span>
+
+                    <div class="rember">
+                        <input type="checkbox" name="" id="" class="remberbtn" checked>记住登录名
+                        <strong><a href="#">使用规则</a> </strong>
+                    </div>
+                </dl>
+            </form>
+        </div>
+    </div>
+    <!-- 注册页面 -->
+    <div id="regist">
+        <form class="regist-con" method="post" action="RegisterServlet" id="regist-action">
+            <ul class="regist-con-left regist-float">
+                <li>
+                    <span><b>手机号码</b><i>*</i></span>
+                    <input type="text" name="username" id="usertel" placeholder="135xxxx333"><span
+                        class="telnumber"></span>
+                </li>
+                <li>
+                    <span><b>输入密码</b><i>*</i></span>
+                    <input type="text" name="userpass" id="userpwd" class="userpwd1"
+                        placeholder="密码至少为8位字符"><span></span>
+                </li>
+                <li>
+                    <span><b>验证码</b><i>*</i></span>
+                    <div class="reg-yzmbox">
+                        <input type="text" name="" id="regist-yzm" placeholder="请输入验证码"><span
+                            class="randomyzm"></span><br><span class="re-yzm"></span>
+                    </div>
+                    <a href="#" class="btnchange-yzm">换一张</a>
+                </li>
+            </ul>
+            <ul class="regist-con-center regist-float">
+                <li>
+                    <span><b>邮箱</b><i>*</i></span><br>
+                    <input type="text" name="uemail" id="useremail" placeholder="example@converse.com">
+                    <br>
+                    <span class="aab"></span>
+                </li>
+                <li>
+                    <span><b>确认密码</b><i>*</i></span>
+                    <input type="text" name="" id="userpwd" class="userpwd2" placeholder="请再次输入密码"><span></span>
+                </li>
+                <li>
+                    <span><b>短信验证码</b><i>*</i></span>
+                    <div class="reg-yzmbox">
+                        <input type="text" name="" id="regist-yzm" placeholder="请输入验证码"><span
+                            class="re-yzm">发送短信验证码</span>
+                    </div>
+                </li>
+            </ul>
+            <ul class="regist-con-right regist-float">
+                <li>
+                    <span><b>性别</b><i>*</i></span><br>
+                    <div class="sexinput-nan sexinput"> <label for=""><input type="radio" value=0 name="usex"
+                                id="sex-man" checked="checked">男的</label>
+                    </div>
+                    <div class="sexinput-nv sexinput"><label for=""><input type="radio" value=1 name="usex"
+                                id="sex-woman">女的</label>
+                    </div>
+                </li>
+                <li>
+                    <span><b>生日 (年-月-日)</b><i>*</i></span><br>
+                    <select name="" id="" class="user-birth">
+                        <option value="1995">1995</option>
+                        <option value="1996">1996</option>
+                        <option value="1997" selected>1997</option>
+                        <option value="1998">1998</option>
+                        <option value="1999">1999</option>
+                        <option value="2000">2000</option>
+                    </select>
+                    <select name="" id="" class="user-birth">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10" selected>10</option>
+                        <option value="11">11</option>
+                        <option value="12">11</option>
+                    </select>
+                    <select name="" id="" class="user-birth">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3" selected>3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </li>
+                <li>
+                    <div class="regist-agree">
+                        <input type="checkbox" name="" id="" class="reg-agreebtn">
+                        <strong>一旦登录，即表明您同意匡威更新的<a href="#">隐私政策</a>和<a href="#">使用规则</a> </strong>
+                        <input type="button" onclick="regist()" name="" id="regist-btn" value="注册账户">
+                    </div>
+                </li>
+            </ul>
+        </form>
+    </div>
+    <!-- 导航栏nav -->
+    <div id="nav">
+        <!-- 显示区域导航栏 -->
+        <div class="nav-con">
+            <ul class="main-nav">
+                <li class="boys-nav nav-title">
+                    <a href="#">男的</a>
+                    <i></i>
+                    <!-- 二级导航栏 -->
+                    <ul class="boys-second-nav second-nav">
+                        <li class="boys-nav-top twonav-top">
+                            <a href="./goodslist.html">
+                                <div class="products">
+                                    <img src="./images/indeximg/nav/nav_snrkers_men_200402.png" alt="">
+                                    <span>踩的</span>
+                                </div>
+                            </a>
+                            <a href="./goodslist.html">
+                                <div class="products">
+                                    <img src="./images/indeximg/nav/nav_acc_women_200402.png" alt="">
+                                    <span>穿的<span>
+                                </div>
+                            </a>
+                            <a href="./goodslist.html">
+                                <div class="products">
+                                    <img src="./images/indeximg/nav/nav_app_men_200402.png" alt="">
+                                    <span>T恤</span>
+                                </div>
+                            </a>
+                            <a href="./goodslist.html">
+                                <div class="products">
+                                    <img src="./images/indeximg/nav/nav_acc_men_200402.png" alt="">
+                                    <span>戴的</span>
+                                </div>
+                            </a>
+                            <a href="./goodslist.html">
+                                <div class="products">
+                                    <img src="./images/indeximg/nav/new_icon.jpg" alt="">
+                                    <span>新产品</span>
+                                </div>
+                            </a>
+                            <a href="./goodslist.html">
+                                <div class="products">
+                                    <img src="./images/indeximg/nav/discount_icon.jpg" alt="">
+                                    <span>优惠</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="boys-nav-bottom twonav-bottom">
+                            <a href="./goodslist.html">
+                                <div class="products">
+                                    <img src="./images/indeximg/nav/nav_app_men_200315.png" alt="">
+                                    <span>经典款</span>
+                                </div>
+                            </a>
+                            <a href="./goodslist.html">
+                                <div class="products">
+                                    <img src="./images/indeximg/nav/nav_jp_men_200402.png" alt="">
+                                    <span>JACK PURCELL<span>
+                                </div>
+                            </a>
+                            <a href="./goodslist.html">
+                                <div class="products">
+                                    <img src="./images/indeximg/nav/nav_70_men_200402.png" alt="">
+                                    <span>CHUCK 70</span>
+                                </div>
+                            </a>
+                            <a href="./goodslist.html">
+                                <div class="products">
+                                    <img src="./images/indeximg/nav/nav_as_men_200402.png" alt="">
+                                    <span>ALL STAR</span>
+                                </div>
+                            </a>
+                            <a href="./goodslist.html">
+                                <div class="products">
+                                    <img src="./images/indeximg/nav/nav_os_men_200402.png" alt="">
+                                    <span>ONE STAR</span>
+                                </div>
+                            </a>
+                            <a href="./goodslist.html">
+                                <div class="products">
+                                    <img src="./images/indeximg/nav/nav_cons_men_200402.png" alt="">
+                                    <span>CONS</span>
+                                </div>
+                            </a>
+                            <a href="./goodslist.html">
+                                <div class="products">
+                                    <img src="./images/indeximg/nav/nav_proleather_men_200402.png" alt="">
+                                    <span>PROLEATHER</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- 二级导航栏到底啦 -->
+                </li>
+                <li class="girls-nav nav-title">
+                    <a href="#">女的</a>
+                    <i></i>
+                    <!-- 二级导航栏 -->
+                    <ul class="girls-second-nav second-nav">
+                        <li class="girls-nav-top twonav-top">
+                            <a href="./goodslist.html">
+                                <div class="products">
+                                    <img src="./images/indeximg/nav/nav_snrkers_men_200402.png" alt="">
+                                    <span>踩的</span>
+                                </div>
+                            </a>
+                            <a href="./goodslist.html">
+                                <div class="products">
+                                    <img src="./images/indeximg/nav/nav_acc_women_200402.png" alt="">
+                                    <span>穿的<span>
+                                </div>
+                            </a>
+                            <a href="./goodslist.html">
+                                <div class="products">
+                                    <img src="./images/indeximg/nav/nav_app_men_200402.png" alt="">
+                                    <span>T恤</span>
+                                </div>
+                            </a>
+                            <a href="./goodslist.html">
+                                <div class="products">
+                                    <img src="./images/indeximg/nav/nav_acc_men_200402.png" alt="">
+                                    <span>戴的</span>
+                                </div>
+                            </a>
+                            <a href="./goodslist.html">
+                                <div class="products">
+                                    <img src="./images/indeximg/nav/new_icon.jpg" alt="">
+                                    <span>新产品</span>
+                                </div>
+                            </a>
+                            <a href="./goodslist.html">
+                                <div class="products">
+                                    <img src="./images/indeximg/nav/discount_icon.jpg" alt="">
+                                    <span>优惠</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="girls-nav-bottom twonav-bottom">
+                            <a href="./goodslist.html">
+                                <div class="products">
+                                    <img src="./images/indeximg/nav/nav_acc_men_200402.png" alt="">
+                                    <span>经典款</span>
+                                </div>
+                            </a>
+                            <a href="./goodslist.html">
+                                <div class="products">
+                                    <img src="./images/indeximg/nav/nav_jp_men_200402.png" alt="">
+                                    <span>JACK PURCELL<span>
+                                </div>
+                            </a>
+                            <a href="./goodslist.html">
+                                <div class="products">
+                                    <img src="./images/indeximg/nav/nav_70_men_200402.png" alt="">
+                                    <span>CHUCK 70</span>
+                                </div>
+                            </a>
+                            <a href="./goodslist.html">
+                                <div class="products">
+                                    <img src="./images/indeximg/nav/nav_as_men_200402.png" alt="">
+                                    <span>ALL STAR</span>
+                                </div>
+                            </a>
+                            <a href="./goodslist.html">
+                                <div class="products">
+                                    <img src="./images/indeximg/nav/nav_os_men_200402.png" alt="">
+                                    <span>ONE STAR</span>
+                                </div>
+                            </a>
+                            <a href="./goodslist.html">
+                                <div class="products">
+                                    <img src="./images/indeximg/nav/nav_cons_men_200402.png" alt="">
+                                    <span>CONS</span>
+                                </div>
+                            </a>
+                            <a href="./goodslist.html">
+                                <div class="products">
+                                    <img src="./images/indeximg/nav/nav_proleather_men_200402.png" alt="">
+                                    <span>PROLEATHER</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- 二级导航栏到底啦 -->
+                </li>
+                <li class="kids-nav nav-title">
+                    <a href="#">儿童</a>
+                    <i></i>
+                    <!-- 二级导航栏 -->
+                    <ul class="kids-second-nav second-nav">
+                        <li class="kids-nav-bottom twonav-bottom">
+                            <a href="./goodslist.html">
+                                <div class="products">
+                                    <img src="./images/indeximg/nav/1-4-v2.png" alt="">
+                                    <span>(1-4岁)</span>
+                                </div>
+                            </a>
+                            <a href="./goodslist.html">
+                                <div class="products">
+                                    <img src="./images/indeximg/nav/4-8-v1.jpg" alt="">
+                                    <span>(4-8岁)<span>
+                                </div>
+                            </a>
+                            <a href="./goodslist.html">
+                                <div class="products">
+                                    <img src="./images/indeximg/nav/8-12.jpg" alt="">
+                                    <span>(4-12岁)</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- 二级导航栏到底啦 -->
+                </li>
+                <li class="stores-nav nav-title">
+                    <a href="#">店铺分布</a>
+                    <i></i>
+                </li>
+
+                <li class="goods-nav nav-title">
+                    <a href="#">尖货发售</a>
+                    <i></i>
+                </li>
+                <li class="discount-nav nav-title">
+                    <a href="#">折扣优惠</a>
+                    <i></i>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="cover"></div>

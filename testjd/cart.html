@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>购物车</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/cart.css">
+</head>
+
+<body>
+    <!-- header页面 -->
+    <div id="header">
+        <div class="header-con">
+            <a href="./kwindex.html">
+                <div class="logo"></div>
+            </a>
+
+            <ul class="r-nav">
+                <li class="n1">
+                    <a href="#" class="login" id="login-btnonly">登录</a>
+                    <a href="#">/</a>
+                    <a href="#" class="regist" id="regist-btnonly">注册</a>
+                    <span></span>
+                </li>
+                <li class="n2">
+                    <a href="#">购物车</a>
+                    <span>0</span>
+                </li>
+                <li class="n3">
+                    <span>
+                        <strong>聊天</strong>
+                    </span>
+                </li>
+                <li class="n4">
+                    <span>
+                        <strong>搜索</strong>
+                    </span>
+                </li>
+                <li class="n5">
+                    <span>
+                        <strong>帮助</strong>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 提示信息 -->
+    <div id="cart-tips">
+        <p>尊敬的顾客您好，我们店铺是不会泄露您的消费信息的，请放心。另外我们也不会要求获取、收集、使用任何与消费者金融消费类（如：信用卡）信息，如果接到以上信息电话，是属于诈骗电话，请勿相信，以防钱财损失。如您对订单有疑问，请联系在线客服。
+        </p>
+        <i class="close-btn"></i>
+    </div>
+    <!-- cartroad -->
+    <div id="cart-road">
+        <ul class="cart-road-con">
+            <li>
+                <a href="#">我的购物车</a>
+                <i></i>
+            </li>
+            <li>
+                <a href="#">填写订单信息</a>
+                <i></i>
+            </li>
+            <li>
+                <a href="#">成功提交订单信息</a>
+                <i></i>
+            </li>
+        </ul>
+    </div>
+    <!-- 您的购物车多少件商品 -->
+    <div id="shopcart-title">
+        <p>您的购物车：<span>1</span>件商品</p>
+    </div>
+    <!-- 开始购物 -->
+    <div id="start-goodsbox">
+        <div class="checked-goods-box">
+            <!-- 全选题目 -->
+            <div class="select-all">
+                <input type="checkbox" name="" id="every-btn-selected">
+                <div>全选</div>
+                <div>您已经选中<i>1</i>件商品</div>
+            </div>
+            <!-- 购物车表单 -->
+            <div class="goods-table-buy">
+                <div class=" shopcart-info-change">
+                    <input type="checkbox" id="first-hbtn">
+                    <div class="editor-sel">
+                        <div class="editor"><span></span>编辑</div>
+                        <div class="sel"><span></span>删除</div>
+                    </div>
+                </div>
+                <div class="goods-information-box">
+                    <li class="goods-infor-left">
+                        <div class="cloths-img">
+                            <img src="./images/magnifier/goods.png" alt="">
+                        </div>
+                        <div class="cloths-infor">
+                            <h4>【男的】Woven Plaid Oversized Shirt</h4>
+                            <p>型号：10020880001</p>
+                            <p>颜色：混合黑色</p>
+                            <p>尺码170/92A</p>
+                        </div>
+                    </li>
+                    <li class="goods-infor-right">
+                        <p>￥<span class="g-price">799.00</span></p>
+                        <div class="shopcart-qty">
+                            <label>数量</label>
+                            <ul class="num-sum">
+                                <li class="num-sel">-</li>
+                                <li class="goods-num-infor">1</li>
+                                <li class="num-add">+</li>
+                            </ul>
+                        </div>
+                        <p>库存仅剩十件</p>
+                    </li>
+                </div>
+            </div>
+            <!-- 结算 -->
+            <div class="finally-sum">
+                <div class="finally-sum-title">
+                    <input type="checkbox" id="dd-selected"><label>全选</label>
+                    <span>您已选中<i class="has-sel-num">2</i>件商品</span>
+                </div>
+                <div class="helpbox">
+                    <div class="help-left-box">
+                        <ul class="if-need">
+                            <h5>需要帮助吗</h5>
+                            <li>如何确保订单安全</li>
+                            <li>我可以使用什么方式付款</li>
+                            <li>如何进行退换货</li>
+                            <li>更多帮助</li>
+                        </ul>
+                        <a href="./goodslist.html">
+                            <div class="continue-buy-btn">继续购物</div>
+                        </a>
+
+                    </div>
+                    <div class="help-right-box">
+                        <h2><span>商品原价</span> <i>￥799.00</i></h2>
+                        <h3><span>店铺活动</span> <i>￥0.00</i></h3>
+                        <h4><span>商品金额：</span>￥ <i class="finally-money">799.00</i></h4>
+                        <p>*不含运费及优惠券折扣</p>
+                        <p>*以会员身份结算可享受免费配送服务</p>
+                        <div class="jiesua-btn">结算</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="footer"></div>
+
+</body>
+
+</html>
+<script src="./js/jQuery.js"></script>
+<script src="./js/cart.js"></script>
+<script>
+    $(function () {
+        $("#footer").load("footer.html")
+    })
+</script>

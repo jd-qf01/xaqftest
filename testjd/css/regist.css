@@ -1,0 +1,134 @@
+@charset "utf-8";
+/* #login-nav{
+    width: 100%;
+    background-color: rgb(84, 18, 238);
+   position: fixed;
+    /* height: 447px; */
+    /* z-index: 10; */
+    /* background-color: white; */
+/* } */
+#regist{
+    background-color: white;
+    width:100%;
+    margin: 0 auto;
+    /* display: none; */
+    position: absolute;
+    display: none;
+}
+.regist-con{
+    width: 1000px;
+    margin: auto;
+    height: 397px;
+    padding: 40px 0;
+}
+.regist-con b{
+    font-size: 14px;
+    color: #333;
+}
+ .regist-con .regist-float{
+     float: left;
+     width: 300px;
+     height: 300px;
+ }
+ .regist-con .regist-float li{
+     width: 300px;
+     height: 95px;
+ }
+ .regist-con .regist-float:nth-child(1),.regist-con .regist-float:nth-child(2){
+      margin-right: 50px;
+ }
+ .regist-con .regist-float li input{
+     /* display:block; */
+     height: 40px;
+     background-color: #fff;
+     border:1px solid black;
+     padding: 5px 5px 5px 18px;
+     color: rgb(100, 98, 98);
+ }
+ #regist-yzm{
+     float: left;
+ }
+ .re-yzm{
+    width: 100px;
+    height: 40px;
+    float: right;
+    background-color: rgb(179, 209, 96);
+    text-align: center;
+    line-height: 40px;
+ }
+#usertel,#userpwd{
+    width: 300px;
+}
+.regist-con-left a{
+    float: right;
+    color: #333;
+     text-decoration: underline;
+    font-size: 14px; 
+}
+.regist-con-center .re-yzm{
+    font-size: 12px;
+    background-color: rgb(77, 80, 75);
+    color: white;
+    text-align: center;
+    line-height: 40px;
+}
+.regist-con-right li input:nth-child(1){
+    margin-right: 50pxS;
+}
+.sexinput{
+    width: 150px;
+    height: 40px;
+    position: relative;
+}
+.sexinput input{
+    width: 20px;
+    height: 20px;
+    /* border-radius: ; */
+}
+.sexinput-nan{
+    float: left;
+}
+.sexinput-nv{
+    float: right;
+}
+.sexinput strong{
+    position: absolute;
+    display: inline-block;
+    top:10px;
+    left: 30px;
+}
+/* ... */
+.regist-agree .reg-agreebtn{ 
+    width: 22px;
+    height: 22px;
+    border: 1px solid black;
+    float: left;
+} 
+.regist-agree strong{
+    font-size: 14px;
+    color: #333;
+    line-height: 22px;
+    text-indent: 22px;
+}
+.regist-agree  strong a{
+    color: #333;
+    text-decoration: underline;
+}
+#regist-btn{
+    width: 300px;
+    border: 1px solid rgb(14, 13, 13);
+    height: 40px;
+    background-color: rgb(206, 203, 203);
+    padding: 5px 5px 5px 18px;
+    margin-bottom: 3px;
+    text-align: center;
+    font-size:14px ;
+    color: #fff;
+}
+.user-birth{
+    width: 80px;
+    height: 40px;
+}
+#regist .regist-con span i{
+    color: red;
+}

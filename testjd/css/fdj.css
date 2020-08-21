@@ -1,0 +1,389 @@
+@charset "utf-8";
+#magnifier{
+    width: 100%;
+}
+.magnifier-con{
+    height: 967px;
+    width: 1000px;
+    margin: 0 auto; 
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.magnifier-left{
+    width: 200px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.magnifier-left li{
+    width: 200px;
+    height: 30px;
+}
+.magnifier-left .share-t span{
+    float: left;
+    width: 30px;
+    height: 30px;
+    background: url(../images/magnifier/detail.png);
+}
+.magnifier-left li a{
+    text-indent: 20em;
+    line-height: 30px;
+}
+.magnifier-left .share-m span{
+    float: left;
+    width: 30px;
+    height: 30px;
+    background: url(../images/magnifier/detail.png);
+    background-position: 0 -43px;
+}
+.magnifier-left .share-b span{
+    float: left;
+    width: 176px;
+    height: 30px;
+    background: url(../images/magnifier/larger-star.png);
+    background-position: 0 -10px;
+}
+.magnifier-left a{
+    color: gray;
+}
+/* 中间区域 */
+.magnifier-center{
+    width: 520px;
+    /* height: 967px; */
+    /* background-color: goldenrod; */
+}
+.magnifier-center .goods-title h1{
+    text-align: center;
+    font-size: 28px;
+}
+.magnifier-center .goods-title h2{
+    text-align: center;
+    font-size: 26px;
+}
+.goods-magnifier-con{
+    width: 450px;
+    height: 450px;
+    background-image: url(../images/magnifier/goods.png);
+    background-size: 450px 450px;
+    position: relative;
+}
+.goods-magnifier-con img{
+    width: 450px;
+    height: 450px;
+}
+.goods-magnifier-con .mask {
+    width: 60px;
+    height: 250px;
+    background-color: red;
+    position: absolute;
+    opacity: 0.3;
+    cursor: move;
+    display: none;
+}
+
+.magnifier-right{
+    width: 200px;
+    height: 60px;
+}
+/* 放大镜显示区域 */
+.magnifier-display{
+    width: 120px;
+    height: 500px;
+    background-image: url(../images/magnifier/goods.png);
+    background-size: 900px 900px;
+    position: absolute;
+    left: 200px;
+    top: 300px;
+    display: none;
+/* 放大镜下的小列表 */
+}
+.magnifier-center-list{
+    width: 520px;
+    height: 72px;
+    margin-bottom: 30px;
+}
+.magnifier-center-list li{
+    width: 72px;
+    height: 72px;
+    float: left;
+    margin-left: 10px;
+    padding:6px ;
+}
+.magnifier-center-list li:hover{
+    border: 1px solid gray;
+}
+.magnifier-center-list li img{
+    width: 60px;
+    height: 60px;
+}
+.goods-detail li{
+    font-size: 12px;
+    color: #000;
+    list-style: disc;
+}
+.goods-detail{
+    padding-left: 20px;
+}
+.magnifier-center h3{
+    color: #333333;
+    font-size: 18px;
+    margin: 40px 0 20px;
+    font-weight: bolder;
+}
+.magnifier-center .p1,.p2{
+font-size: 12px;
+color: #333;
+}
+.magnifier-center .p2{
+    margin-bottom: 20px;
+    }
+.magnifier-center .learn-more-btn{
+    width: 290px;
+    height: 50px;
+    display: block;
+    color: #fff;
+    background-color: black;
+    font-size: 16px;
+    text-align: center;
+    line-height: 50px;
+    margin: 40px auto 30px;
+}
+.magnifier-center .learn-more-btn:hover{
+    background-color: white;
+    color: #000;
+    border: 1px solid gray;
+}
+/* 放大镜右边 */
+.magnifier-right .goods-xh{
+    width: 200px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+.magnifier-right .goods-xh a{
+    float: left;
+    display: block;
+    width: 49px;
+    height: 50px;
+    margin: 0 1px 10px 0;
+    padding: 6px;
+}
+.magnifier-right .goods-xh a:hover{
+    border: 1px solid black;
+}
+.magnifier-right .goods-xh a img{
+    width: 37.5px;
+    height: 37.5px;
+}
+.magnifier-right .product-info{
+    font-size: 12px;
+}
+.product-info .info1{
+    display: block;
+margin-bottom: 10px;
+}
+.product-info .info2{
+    font-size: 14px;
+    color: rgb(80, 78, 78);
+}
+.product-info{
+    padding-bottom: 40px;
+    border-bottom: 1px solid gray;
+    margin-bottom: 10px;
+}
+.magnifier-right .product-cart{
+    width: 200px;
+    height: 268px;
+}
+.size-top{
+    width: 200px;
+    height: 28px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+ .size-top .cloth-size{
+width: 98px;
+line-height: 28px;
+}
+.size-top .size-text{
+    font-size: 14px;
+}
+.product-cart p{
+    font-size: 16px;
+    font-weight: bolder;
+    color: #333;
+    margin-bottom: 20px;
+}
+.sum-bottom{
+    display: flex;
+    justify-content: space-between;
+}
+.sum-bottom {
+    width: 200px;
+    height: 28px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+.sum-bottom .cloth-num{
+width: 98px;
+}
+.product-cart #now-buy-btn,#add-to-cart{
+    display: block;
+    width: 200px;
+    height: 50px;
+    background-color: #940000;
+    font-size: 16px;
+    color: #fff;
+    font-weight: bolder;
+    text-align: center;
+    line-height: 50px;
+}
+.product-cart #now-buy-btn{
+    margin-bottom: 20px;  
+}
+.product-cart #now-buy-btn:hover{
+    background-color: #ad4646;
+}
+.product-cart #add-to-cart:hover{
+    background-color: #ad4646;
+}
+/* 你或许会喜欢标题 */
+#maybe-like{
+    width: 100%;
+    height: 30px;
+    margin-bottom: 40px;
+}
+.maybe-like-title{
+    width: 1000px;
+    height: 30px;
+    margin: 0 auto;
+    position: relative;
+}
+.maybe-like-title h1{
+width: 360px;
+height: 30px;
+background-color: white;
+margin: 0 auto;
+font-size: 30px;
+padding: 0 40px;
+line-height: 30px;
+position: absolute;
+left: 320px;
+text-align: center;
+}
+.maybe-like-title::before{
+    content: "";
+    position: absolute;
+    width: 97%;
+    border: 1px solid black;
+    top:15px;
+    margin: 0 auto;
+    left: 15px;
+}
+/* 放大镜分页效果 */
+#fdj-fenye{
+    width: 1000px;
+    margin: 0 auto;
+    height: 300px;
+    position: relative;
+    margin-bottom: 50px;
+}
+#fdj-fenye .fenye-con li{
+    float: left;
+    width: 250px;
+    height: 300px;
+ 
+}
+#fdj-fenye .fenye-con li:hover{
+   border: 1px solid black;
+}
+#fybtn-previous{
+    position: absolute;
+    width: 21px;
+    height: 40px;
+    left:-30px;
+    top:130px;
+    background-image: url(../images/magnifier/sprites_icon.png);
+    background-position: 0 42px;
+}
+#fybtn-next{
+    position: absolute;
+    width: 21px;
+    height: 40px;
+    left:1030px;
+    top:130px;
+    background-image: url(../images/magnifier/sprites_icon.png);
+    background-position: 0 -2px;
+}
+#fdj-fenye .fenye-con li img{
+    width: 165px;
+    height: 165px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+#fdj-fenye .fenye-con li p{
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+#fdj-fenye .fenye-con li h2{
+    text-align: center;
+}
+#star-comment{
+    width: 1000px;
+    height: 50px;
+    margin: 0 auto 40px;
+    position: relative;
+
+}
+#star-comment .star-img{
+    width: 215px;
+    height: 50px;
+    margin: 0 auto;
+    /* padding-top: 20px; */
+}
+.star-img span:nth-child(1){
+    display: inline-block;
+    width: 175px;
+    height: 50px;
+    background: url(../images/magnifier/larger-star.png);
+}
+.star-img span:nth-child(2){
+    display: inline-block;
+font-size: 30px;
+color: rgb(190, 37, 10);
+line-height: 50px;
+height: 50px;
+position: absolute;
+font-weight: bolder;
+}
+#search-goods{
+    width: 1000px;
+    min-height: 300px;
+    margin: 0 auto;
+}
+/* 最近看到的商品 */
+#search-goods li{
+    width: 250px;
+    height: 300px;
+    float: left;
+}
+#search-goods li:hover{
+    border: 1px solid gainsboro;
+}
+.goods-near img{
+width: 165px;
+height: 165px;
+margin:  0 auto;
+margin-bottom: 20px;
+}
+#search-goods li p{
+    margin-bottom: 10px;
+    text-align: center;
+}

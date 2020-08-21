@@ -1,0 +1,329 @@
+@charset "utf-8";
+body{
+    padding-top: 80px;
+}
+#cart-tips{
+    width: 100%;
+    height: 72px;
+    background-color: rgb(253, 251, 251);
+    padding: 20px 0;
+    position: relative;
+}
+#cart-tips p{
+    width: 1000px;
+    height: 72px;
+    margin: 0 auto;
+    font-size: 12px;
+    color: #000;
+}
+#cart-tips i{
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: url(../images/cart/dialog-close-fff.png);
+    top: 20px;
+    right: 40px;
+}
+/* 进度条 */
+#cart-road{
+    width: 100%;
+    height: 46px;
+    margin: 40px auto 32px;
+}
+.cart-road-con{
+    width: 486px;
+    height: 44px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.cart-road-con li{
+     width: 162px;
+     text-align: center;
+       position: relative;
+
+}
+.cart-road-con li a{
+    color: #000;
+   font-size: 14px;
+ 
+}
+.cart-road-con li i{
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: 0 auto;
+}
+.cart-road-con li:nth-of-type(1) i{
+     background: url(../images/cart/gress.png);
+}
+.cart-road-con li:nth-of-type(2) i{
+    background: url(../images/cart/null-gress.png);
+}
+.cart-road-con li:nth-of-type(3) i{
+    background: url(../images/cart/null-gress.png);
+}
+.cart-road-con li::after{
+    content: "";
+    height: 1px;
+    background-color: #979797;
+    left: 56%;
+    position: absolute;
+    top: 70%;
+    width: 142px;
+}
+.cart-road-con li:nth-of-type(3){
+    position: relative;
+}
+.cart-road-con li:nth-of-type(3)::before{
+    content: "";
+    height: 1px;
+    background-color: #fdfcfc;
+    position: absolute;
+    top: 70%;
+    width: 142px;
+    left:90px;
+    z-index: 1;
+}
+/* 您的购物车多少件商品 */
+#shopcart-title{
+    width: 100%;
+    height: 26px;
+    margin-bottom: 40px;
+}
+#shopcart-title p{
+    width: 1000px;
+    height: 26px;
+    margin: 0 auto;
+    font-size: 26px;
+    color: #333;
+    margin-bottom: 26px;
+}
+/* 开始购物 */
+#start-goodsbox{
+    height: 700px;
+    width: 100%;
+}
+.checked-goods-box{
+    width: 1000px;
+    height: 34px;
+    margin: 0 auto;
+
+}
+.checked-goods-box input{
+    width: 34px;
+    height: 34px;
+    margin-right: 10px;
+}
+.select-all{
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    line-height: 34px;
+    margin-bottom: 10px;
+}
+.goods-table-buy{
+    width: 1000px;
+    height: 240px;
+}
+.shopcart-info-change{
+    width: 1000px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.shopcart-info-change{
+    display: flex;
+}
+.editor-sel{
+    width: 150px;
+    height: 50px;
+    display: flex;
+}
+.editor-sel .editor,.sel{
+    width: 100px;
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+}
+.editor-sel .editor::before{
+    background: url(../images/cart/a.png);
+    background-size:22px 22px ;
+    content: "";
+    height: 22px;
+    left: 35px;
+    position: absolute;
+    top: 12px;
+    width: 22px;
+}
+.editor-sel .sel::before{
+    background: url(../images/cart/b.png);
+    background-size:22px 22px ;
+    content: "";
+    height: 22px;
+    left: 35px;
+    position: absolute;
+    top: 12px;
+    width: 22px;
+}
+/* 信息 */
+.goods-information-box{
+    width: 100%;
+    height: 188px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid gainsboro;
+}
+.goods-infor-left .cloths-img{
+width: 160px;
+height: 160px;
+}
+.goods-infor-left .cloths-img img{
+    width: 100%;
+    height: 100%;
+}
+.goods-infor-left .cloths-infor{
+    width: 330px;
+    height: 160px;
+    padding-top: 20px; 
+}
+.goods-infor-left{
+    display: flex;
+}
+.cloths-infor h4{
+    font-size: 18px;
+    color: #333;
+    line-height: 18px;
+    padding-bottom: 30px;
+}
+.cloths-infor p{
+    margin-bottom: 10px;
+}
+.goods-infor-right{
+    width: 130px;
+    height: 104px;
+}
+.goods-infor-right p{
+    font-size: 16px;
+    color: rgb(116, 12, 12);
+    margin-bottom: 20px;
+}
+.shopcart-qty{
+    display: flex;
+    margin-bottom: 15px;
+}
+.shopcart-qty label{
+    margin-right: 4px;
+}
+.shopcart-qty .num-sum li{
+    float: left;
+    height: 25px;
+    text-align: center;
+}
+.shopcart-qty .num-sum li:nth-child(1){
+    border: 1px solid rgb(116, 12, 12);
+    width: 25px;
+}
+.shopcart-qty .num-sum li:nth-child(3){
+    border: 1px solid rgb(116, 12, 12);
+    width: 25px;
+}
+.shopcart-qty .num-sum li:nth-child(2){
+    border-top:1px solid rgb(116, 12, 12);
+    border-bottom:1px solid rgb(116, 12, 12);
+    width: 35px;
+    text-emphasis: none;
+    line-height: 25px;
+}
+.finally-sum-title span i{
+    color: rgb(116, 12, 12);
+    font-weight: bolder;
+}
+.finally-sum .if-need{
+    width: 300px;
+    height: 155px;
+    margin: 0 0 10px;
+    padding: 20px 20px 20px 50px;
+    border: 1px solid gainsboro;
+}
+.finally-sum .if-need li{
+    list-style: disc;
+}
+.finally-sum .if-need h5{
+    font-size: 20px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+.finally-sum-title{
+    margin-bottom: 20px;
+}
+.continue-buy-btn{
+    width: 298px;
+    height: 48px;
+    color: #333;
+    font-size: 18px;
+    text-align: center;
+    line-height: 48px;
+    border: 1px solid gainsboro;
+}
+.helpbox{
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+}
+.help-right-box{
+    width: 242px;
+    height: 240px;
+}
+.help-right-box h2,h3,h4{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.help-right-box h4{
+    font-size: 20px;
+}
+.help-right-box p:nth-of-type(2){
+    color: rgb(136, 41, 41);
+    font-size: 14px;
+}
+.help-right-box p{
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.help-right-box .jiesua-btn{
+    width: 198px;
+    height: 50px;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    font-size: 18px;
+    background-color: #b63330;
+    border: 1px solid gainsboro;
+    margin: 30px auto 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

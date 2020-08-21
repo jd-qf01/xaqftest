@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品列表</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/logoin.css">
+    <link rel="stylesheet" href="./css/regist.css">
+    <link rel="stylesheet" href="./css/goodlist.css">
+</head>
+
+<body>
+    <div id="common"></div>
+    <div id="goodlist-title">
+        <div class="goodlist-title-con">
+            <h1>男的/穿的/72件商品</h1>
+        </div>
+    </div>
+    <div id="goodlists">
+        <div class="goodslist-con clear_fix">
+            <!-- 手风琴及筛选展示区 -->
+            <div class="goodslist-leftcon">
+                <div class="choose">
+                    <div class="choose-title">筛选</div>
+                </div>
+                <div class="sort">
+                    <dl>
+                        <dt>系列
+                            <span></span>
+                        </dt>
+                    </dl>
+                    <dl>
+                        <dt>季节
+                            <span></span>
+                        </dt>
+                    </dl>
+                    <dl>
+                        <dt>产品分类
+                            <span></span>
+                        </dt>
+                    </dl>
+                    <dl>
+                        <dt>价格
+                            <span></span>
+                        </dt>
+                    </dl>
+                </div>
+            </div>
+            <!-- 商品列表展示区 -->
+            <div class="goodslist-showcon clear_fix">
+                <ul class="showcon-title clear_fix">
+                    <li class="border_none">排序</li>
+                    <li>默认</li>
+                    <li>价格</li>
+                    <li>最喜欢</li>
+                    <li>最畅销</li>
+                </ul>
+                <div class="showcon-wrap">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer"></div>
+</body>
+
+</html>
+<script src="./js/jQuery.js"></script>
+<script src="js/index.js"></script>
+<script src="js/gooddata.js"></script>
+<script>
+    $(function () {
+        $("#common").load("common.html");
+        $("#footer").load("footer.html");
+        // 。。。。。。。。。商品列表动态生成
+        $.ajax({
+        type: 'post',
+        datatype: "json",
+        async: true,
+        url: 'http://127.0.0.1:8080/kwht/getAllGoodsByTypeID',
+        data: {
+            //username: $("#email").val(),
+            //userpass: $("#pwd").val()
+        },
+        success: function (res) {
+        var date= JSON.parse(res);
+         console.log("success");
+            var str = "";
+			   for (var i = 0; i < date.length; i++) {
+			       str += '<div class="list">' +'<a href="fdj.html">'+
+			           '<img src = "' + date[i].goodsImg + '" alt = "" >' +'</a>' +
+			           '<p>' + date[i].goodsName + '</p>' +
+			           '<span>' + date[i].goodsPrice + '</span>' +
+			           '</div>';
+			   }
+		    var oshowwrap = document.querySelector(".showcon-wrap");
+		    oshowwrap.innerHTML = str;
+        },
+        error: function () {
+            console.log("error");
+        },
+        complate: function () {
+            console.log("complate");
+        }
+    });
+    });
+    
+     
+    
+    
+   
+</script>
